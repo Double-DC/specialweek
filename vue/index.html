@@ -7,6 +7,42 @@
             </span>
         </li>
     </ul>
+    <h2>Total Invertory: {{ totalProducts }}</h2>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            products: []
+        },
+        computed: {
+            totalProducts () {
+                return this.products.reduce((sum, product) => {
+                    return sum + product.quantity
+                }, 0)
+            }
+        },
+        created() {
+            fetch('products.json')
+            .then(response => response.json())
+            .then(json => {
+                this.products = json.products
+            })
+        }
+    })
+</script>
+
+<!--<div id="app">
+    <ul>
+        <li v-for="product in products">
+            {{ product.quantity }} {{ product.name}}
+            <span v-if="product.quantity === 0">
+                - OUT OF STOCK
+            </span>
+        </li>
+    </ul>
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -24,7 +60,7 @@
             })
         }
     })
-</script>
+</script>-->
 
 <!--<div id="app">
     <ul>
