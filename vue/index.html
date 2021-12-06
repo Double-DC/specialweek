@@ -1,6 +1,34 @@
 <div id="app">
     <ul>
         <li v-for="product in products">
+            {{ product.quantity }} {{ product.name}}
+            <span v-if="product.quantity === 0">
+                - OUT OF STOCK
+            </span>
+        </li>
+    </ul>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            products: []
+        },
+        created() {
+            fetch('products.json')
+            .then(response => response.json())
+            .then(json => {
+                this.products = json.products
+            })
+        }
+    })
+</script>
+
+<!--<div id="app">
+    <ul>
+        <li v-for="product in products">
             {{ product }}
         </li>
     </ul>
@@ -18,7 +46,7 @@
                 ]
         }
     })
-</script>
+</script>-->
 
 
 <!--<div id="app">
