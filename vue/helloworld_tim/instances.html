@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="app">
+  <p>{{ foo }}</p>
+  <!-- this will no longer update `foo`! -->
+  <button v-on:click="foo = 'baz'">Change it</button>
+</div>
+
+  <script>
+    var obj = {
+      foo: 'bar'
+    }
+
+    // freeze makes sure object cannot change
+    Object.freeze(obj)
+
+    new Vue({
+      el: '#app',
+      data: obj
+    })
+
+  </script>
+</body>
+</html>
