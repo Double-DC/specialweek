@@ -1,34 +1,32 @@
 {
-    "products":  [
-        {
-          "id": 1,
-          "name": "Dark Souls III",
-          "quantity": 23,
-          "price": 39.99,
-          "developer": "FromSoftware"
-        },
-        {
-          "id": 2,
-          "name": "Elden Ring",
-          "quantity": 0,
-          "price": 69.99,
-          "developer": "FromSoftware"
-        },
-        {
-          "id": 3,
-          "name": "Dead Cells",
-          "quantity": 32,
-          "price": 9.99,
-          "developer": "?"
-        },
-        {
-          "id": 4,
-          "name": "Apex Collectors Edition",
-          "quantity": 52,
-          "price": 19.99,
-          "developer": "EA sports"
-        }    
-      
-    
-    ]
-  }
+  "products":  [
+    {
+      "id": 1,
+      "name": "Dark Souls III",
+      "quantity": 1,
+      "price": 39.99,
+      "developer": "FromSoftware"
+    },
+    {
+      "id": 2,
+      "name": "Elden Ring",
+      "quantity": 1,
+      "price": 69.99,
+      "developer": "FromSoftware"
+    },
+    {
+      "id": 3,
+      "name": "Dead Cells",
+      "quantity": 1,
+      "price": 39.99,
+      "developer": "FromSoftware"
+    },
+    {
+      "id": 4,
+      "name": "Dark Souls III",
+      "quantity": 1,
+      "price": 39.99,
+      "developer": "FromSoftware"
+    }
+  ]
+}

@@ -18,7 +18,7 @@
     <h2>Total Invertory: {{ totalProducts }}</h2>
 </div>
 
-<script src="https://unpkg.com/vue"></script>
+<script src="vue.js"></script>
 
 <script>
     const app = new Vue({
@@ -34,11 +34,9 @@
             }
         },
         created() {
-            fetch('backend/products.json')
-                .then(response => response.json())
-                .then(json => {
-                    this.products = json.products
-                })
+            fetch("products.json")
+                .then(res => res.json())
+                .then(data => console.log(data))
         }
     })
 </script>
@@ -119,7 +117,7 @@
     })
 </script>-->
 
-<!--<div id="app">
+<!-- <div id="app">
     <ul>
         <li v-for="product in products">
             {{ product.quantity }} {{ product.name}}
@@ -130,7 +128,7 @@
     </ul>
 </div>
 
-<script src="https://unpkg.com/vue"></script>
+<script src="vue.js"></script>
 <script>
     const app = new Vue({
         el: '#app',
@@ -145,7 +143,8 @@
             })
         }
     })
-</script>-->
+
+</script> -->
 
 <!--<div id="app">
     <ul>
@@ -170,8 +169,8 @@
 </script>-->
 
 
-<!--<div id="app">
-    <h2>{{ product }} are in stock.</h2>
+<!-- <div id="app">
+    <h2>{{ products }} are in stock.</h2>
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -179,7 +178,7 @@
     const app = new Vue({
         el: '#app',
         data: {
-            product: ['Boots'
+            products: ['Boots']
         }
     })
-</script>-->
+</script> -->
