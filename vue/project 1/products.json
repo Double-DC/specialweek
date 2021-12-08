@@ -2,23 +2,31 @@
     "products":  [
         {
           "id": 1,
-          "name": "Compass",
-          "quantity": 1
+          "name": "Dark Souls III",
+          "quantity": 23,
+          "price": 39.99,
+          "developer": "FromSoftware"
         },
         {
           "id": 2,
-          "name": "Jacket",
-          "quantity": 0
+          "name": "Elden Ring",
+          "quantity": 0,
+          "price": 69.99,
+          "developer": "FromSoftware"
         },
         {
           "id": 3,
-          "name": "Hiking Socks",
-          "quantity": 5
+          "name": "Dead Cells",
+          "quantity": 32,
+          "price": 9.99,
+          "developer": "?"
         },
         {
           "id": 4,
-          "name": "Suntan Lotion",
-          "quantity": 2
+          "name": "Apex Collectors Edition",
+          "quantity": 52,
+          "price": 19.99,
+          "developer": "EA sports"
         }    
       
     
