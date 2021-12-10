@@ -6,16 +6,17 @@
 <body>
 <div class="nav">
     <ul>
-        <li><a class="active" href="/webshop">Home</a></li>
-        <li><a href="/webshop">News</a></li>
-        <li><a href="/webshop">Contact</a></li>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li style="float:right"><a href="#about">About</a></li>
     </ul>
+
 </div>
 
 <div id="app" class="container">
     <div v-for="product in products" class="card">
-        <a class="item-link" :href="('products/' + product.pagename)">
+        <a class="item-link" href="">
             <div class="header-card">
                 <h3>
                     {{ product.name }}

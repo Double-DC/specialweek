@@ -1,0 +1,53 @@
+{
+  "products":  [
+    {
+      "id": 1,
+      "name": "Dark Souls III",
+      "quantity": 3,
+      "price": 39.99,
+      "developer": "FromSoftware",
+      "img": "darksouls3.png",
+      "pagename": "darksouls/darksouls.html"
+    },
+    {
+      "id": 2,
+      "name": "Elden Ring",
+      "quantity": 7,
+      "price": 69.99,
+      "developer": "FromSoftware",
+      "img": "eldenring.png",
+      "pagename": "eldenring/eldenring.html"
+    },
+    {
+      "id": 3,
+      "name": "Dead Cells",
+      "quantity": 0,
+      "price": 9.99,
+      "developer": "Motion Twins",
+      "img": "deadcells.png",
+      "pagename": "deadcells/deadcells.html"
+    },
+    {
+      "id": 4,
+      "name": "Apex Legends Champions Edition",
+      "quantity": 2,
+      "price": 19.99,
+      "developer": "EA Sports",
+      "img": "apexlegendsCE.png",
+      "pagename": "apexlegendsCE/apexlegendsCE.html"
+    },
+
+
+
+
+    {
+      "id": 5,
+      "name": "Apex Legends Champions Edition",
+      "quantity": 2,
+      "price": 19.99,
+      "developer": "EA Sports",
+      "img": "apexlegendsCE.png"
+    }
+
+  ]
+}

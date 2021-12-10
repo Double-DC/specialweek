@@ -87,3 +87,21 @@ body {
     color: #16C0B0;
     text-decoration: underline;
   }
+
+  .review, .details {
+    background-color: white;
+  }
+
+  .reviewbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 10%;
+    width: 100%;
+
+    }
+
+    h1, h2, h3, h4, h5, h6  {
+      padding-left: 0;
+  }

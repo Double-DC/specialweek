@@ -18,9 +18,9 @@ Vue.component('product', {
             <p v-else>Out of Stock</p>
             <p>Shipping: {{ shipping }} </p>
 
-            <ul>
-                <li v-for="detail in details">{{ detail }}</li>
-            </ul>
+            
+                <p v-for="detail in details">{{ detail }}</p>
+            
             <div v-for="(variant, index) in variants" 
             :key="variant.variantId"
             class="color-box"
@@ -39,20 +39,26 @@ Vue.component('product', {
 
         </div>
 
-        <div>
-            <h2>Reviews</h2>
-            <p v-if="!reviews.length"> There are no reviews yet.</p>
-            <ul>
-                <li v-for="review in reviews">
-                <p>{{ review.name }}</p>
-                <p>Rating: {{ review.rating }}</p>
-                <p>{{ review.review }}</p>                
-                </li>
-                </ul>
+        <div class="reviewbox">
+        <product-review @review-submitted="addReview"></product-review>
+
+        <div style="margin-left: 15%; float:left">
+            <h2>
+                Reviews
+            </h2>
+            <p v-if="!reviews.length"> 
+                There are no reviews yet.
+            </p>
+            
+                <p v-for="review in reviews">
+                    {{ review.name }}<br>
+                    Rating: {{ review.rating }} <br>
+                    {{ review.review }}<br>           
+                </p>    
+       </div>
        </div>
 
 
-        <product-review @review-submitted="addReview"></product-review>
     </div>
 
     `,
@@ -119,9 +125,7 @@ Vue.component('product-review', {
 
     <p v-if="errors.length">
         <b>Please correct the following error(s):</b>
-        <ul>
-            <li v-for="error in errors">{{ error }}</li>
-        </ul>
+            <p v-for="error in errors">{{ error }}</p>
     </p>
 
 
