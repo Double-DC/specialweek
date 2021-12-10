@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Vue Webshop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="float:right"><a href="#about">About</a></li>
+    </ul>
+
+</div>
+
+<div id="app" class="container">
+    <div v-for="product in products" class="card">
+        <a class="item-link" href="">
+            <div class="header-card">
+                <h3>
+                    {{ product.name }}
+                </h3>
+            </div>
+            <div class="img-card">
+                <img class="img" :src="('img/' + product.img)">
+            </div>
+            <h4 class="item-price">
+                &euro;{{ product.price }}
+            </h4>
+            <button class="button">
+                Go to item
+            </button>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            products: [],
+            image: 'pad/image'
+        },
+        computed: {
+            totalProducts() {
+                return this.products.reduce((sum, product) => {
+                    return sum + product.quantity
+                }, 0)
+            }
+        },
+        created() {
+            fetch('backend/products.json')
+                .then(response => response.json())
+                .then(json => {
+                    this.products = json.products
+                })
+        }
+    })
+</script>
+</body>
+</html>

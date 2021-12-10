@@ -1,0 +1,100 @@
+body{
+    font-family: Montserrat;
+}
+
+body .container  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1, h2, h3, h4, h5, h6  {
+    padding-left: 30px;
+}
+
+/* card css */
+body .container .card   {
+    overflow: hidden;
+    width: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    transition: 0.7s;
+    min-height: 450px;
+    max-height: 450px;
+    cursor: pointer;
+
+}
+
+body .container .card:hover   {
+    box-shadow: 0px 0px 10px #dbdbdb;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited, a:hover, a:active, a:focus  {
+    text-decoration: none;
+}
+
+.button {
+    padding: 10px;
+    margin-top: -40px;
+    float: right;
+    font-size: 17px;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: montserrat;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 2;
+}
+
+.img    {
+    min-width: 100%;
+    margin-left: 0;
+    position: relative;
+    height: 300px;
+    z-index: 1;
+}
+
+    /* navigation */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
