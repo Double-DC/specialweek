@@ -67,14 +67,14 @@ Vue.component('product', {
                     variantId: 2234,
                     variantVersion: "normal",
                     variantImage: 'darksouls.jpg',
-                    variantColor: "green",
+                    variantColor: "grey",
                     variantQuantity: 10
                 },
                 {
                     variantId: 2235,
                     variantVersion: "goty",
                     variantImage: 'darksoulsgoty.jpg',
-                    variantColor: "blue",
+                    variantColor: "darkgrey",
                     variantQuantity: 0
                 }
             ],
